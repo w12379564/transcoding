@@ -1,5 +1,7 @@
 # The transcoding logic of grpc-httpjson-transcoding
 
+![flow chart](https://github.com/w12379564/transcoding/blob/master/transcoding.jpg)
+
 1. Implement the Transcoder interface defined in [transcoder.h](https://github.com/grpc-ecosystem/grpc-httpjson-transcoding/blob/master/src/include/grpc_transcoding/transcoder.h). We can refer to the implementation in [Extensible Service Proxy](https://github.com/cloudendpoints/esp/blob/master/src/grpc/transcoding/transcoder_factory.cc#L61).
 
 2. Initialize Transcoder factory for a specific service config. Holds the preprocessed service config and creates a Transcoder per each client request using the following information:
